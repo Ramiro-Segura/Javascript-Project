@@ -1,0 +1,30 @@
+[
+    {"id": 1, 
+        "tipo": "comida", 
+        "nombre": "Taco de Carne", 
+        "ingredientes": "(cebolla morada, cebolla de verdeo, tomate, lechuga, pimiento rojo y verde)",
+        "precio": 400},
+
+    {"id": 2,
+         "tipo": "comida", 
+         "nombre": "Taco de Pollo",
+         "ingredientes": "(cebolla morada, cebolla de verdeo, tomate, lechuga, pimiento rojo y verde)",
+         "precio": 400},
+
+    {"id": 3,
+        "tipo": "comida",
+        "nombre": "Taco de Verdura",
+        "ingredientes": "(zuquini, berenjena, choclo, cebolla morada, palta, pimiento rojo y verde)",
+        "precio": 300},
+    {"id": 4,
+        "tipo": "comida",
+        "nombre": "Taco de Carne Braseada",
+        "ingredientes": "(cebolla morada, cebolla de verdeo, tomate, lechuga, pimiento rojo y verde)",
+        "precio": 450},
+    {"id": 5,
+        "tipo": "comida",
+        "nombre": "Taco de Pescado",
+        "ingredientes": "(cebolla morada, cebolla de verdeo, tomate, lechuga, pimiento rojo y verde)",
+        "precio": 400}     
+       
+]   

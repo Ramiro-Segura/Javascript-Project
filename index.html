@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="icons/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <title>Proyecto Javascript</title>
+</head>
+<body>
+    <div class="container">
+        <button id="switch" class="switch active"><!----Modo Nocturno---->
+            <span><img class="icons" src="media/luna.png"></span>
+            <span><img class="icons"  src="media/sun.png"></span>
+        </button>
+        <button id="boton-usuario"><i class="fas fa-user"></i></button>
+        <div class="modal-contenedor-usuario"><!----Modal Usuario---->
+            <div class="modal-usuario">
+                <p class="datosTexto">Datos del usuario</p> <!----Inputs datos del usuario---->
+                <div>
+                    <input type="text" placeholder="Nombre" id="nombreInput">
+                </div>
+                <div>
+                    <input type="text" placeholder="Domicilio" id="domicilioInput">
+                </div>
+                <div>
+                    <input type="text" placeholder="Numero de Celular" id="celularInput">
+                </div>
+                <button id="btnGuardar" class="guardarTexto">Guardar datos</button>
+                <hr>
+                <div class="datosGuardadosTexto">
+                    <p>Nombre guardado:</p>
+                    <label id="nombre"></label>                         
+                    <p>Domicilio guardado:</p>
+                    <label  id="domicilio"></label>
+                    <p>Numero de celular guardado:</p>
+                    <label id="nCelular"></label>
+                </div>
+                <button id="btnCargar" class="cargarTexto">Cargar datos</button>
+                <button id="cerrar-modal"><i class="far fa-times-circle"></i></button>
+            </div>
+        </div>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+        <div class="modal-contenedor"><!----Modal Carrito de Compras---->
+            <div class="modal-carrito">
+                <h2>Carrito</h2>
+                <button id="carritoCerrar"><i class="far fa-times-circle"></i></button>
+                <div id="carrito-contenedor"></div>
+                <p class="precioTacos">Total : $ <span id="precioTotal"></span></p>
+                <button class="fnPedido" onclick= finalizarPedido()>Finalizar Compra</button>
+            </div>
+        </div>
+        <div class="info">
+            <h1>Tacos Neta</h1>
+            <img class="logo" src="media/taco.png"> 
+            <p>Abierto de Miercoles a Sabado</p>
+            <p>20:00hs -23:30hs</p>
+        </div>
+        <main id="contenedor-productos"><!----Lista de tacos agregado en archivo JS---->
+            <p class="titles">Tacos</p>
+        </main>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/modalUsuario.js"></script>
+    <script src="js/modalCarrito.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

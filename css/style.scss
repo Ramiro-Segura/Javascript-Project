@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Amatic SC', cursive;
+    transition: .3s ease all;
+    background-color: burlywood;
+    &.dark{
+        background: #3d3d3d;
+        color: #ffffff;
+    }
+}
+//modo nocturno
+.switch{
+    margin-top: 20px;
+    background: rgb(169, 169, 170);
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    &::after{
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #f1f1f1;
+        top: 0;
+        left: unset;
+        right: 0;
+        border-radius: 100px;
+        transition: .4s ease all;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0,.2);
+    }
+    &.active{
+        background: rgb(145, 103, 25);
+        color: #000;
+        &::after{
+            right: unset;
+            left: 0;
+        }
+    }
+    span{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff;
+    }
+}
+
+//modal usuario
+#boton-usuario{
+    margin-top: 30px;
+    margin-left: 5rem;
+    color: rgb(212, 163, 26);
+    font-size: 40px;
+    background-color: white;
+    border-radius: 100%;
+    padding: 13px 23px;
+    transition: all .5s;
+}
+#boton-usuario:hover{
+    cursor: pointer;
+}
+#boton-usuario{
+    outline: none;
+}
+
+.modal-contenedor-usuario{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.modal-active-user{
+    visibility: visible;
+    opacity: 1;
+}
+.modal-usuario{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    color: #000;
+    width: 520px;
+    height: auto;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+input{ 
+    width: 250px;
+    padding-top: 7px;
+    margin-bottom: 20px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-right-width: 9px;
+    border-left-width: 9px;
+}
+#cerrar-modal{
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 15px;
+}
+.datosTexto{
+    background-color: burlywood;
+    font-size: 29px;
+    font-style: italic;
+}
+.guardarTexto ,.cargarTexto{
+    border-radius: 10px;
+    margin-bottom: 11px;
+    margin-left: 11rem;
+    margin-right: 11rem;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-color: #000;
+}
+.guardarTexto ,.cargarTexto:hover{
+    cursor: pointer;
+}
+.cargarTexto{
+    margin-bottom: 25px;
+    margin-left: 200px;
+}
+///modal carrito
+#boton-carrito{
+    margin-left: 50rem;
+    color: rgb(212, 163, 26);
+    font-size: 40px;
+    background-color: white;
+    border-radius: 100%;
+    padding: 13px 23px;
+    transition: all .5s;
+    outline: none;
+}
+#boton-carrito:hover{
+    cursor: pointer;
+}
+.modal-contenedor{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.modal-active{
+    visibility: visible;
+    opacity: 1;
+}
+.modal-carrito {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    color: #000;
+    width: 600px;
+    height: auto;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+.productoEnCarrito{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#carritoCerrar{
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 15px;
+}
+///
+.icons{
+    width: 20px;
+    height: auto;
+}
+.logo{
+    width: 90px;
+    height: 90px;
+}
+p , .modal-usuario{
+    font-size: 21px;
+   
+}
+.main{
+    font-size: 17px;
+}
+.titles{
+    font-size: 22px;
+}
+ 
+.info{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+.fnPedido{
+    width: 133px;
+    letter-spacing: 1px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 7px;
+    margin-bottom: 9px;
+    border-color: rgb(240, 159, 8);
+    border-radius: 10px;
+}
+//botones sumar y restar
+.boton-agregar{
+    font-size: 17px;
+    font-weight: 1200;
+    width: 65px;
+    height: 33px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-radius:20px;
+    border-color: rgb(240, 159, 8);
+}
+
+.boton-agregar:hover{
+    cursor: pointer;
+}
+.boton-sumar ,.boton-restar{
+    width: 40px;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.boton-sumar ,.boton-restar:hover{
+    cursor: pointer;
+}
